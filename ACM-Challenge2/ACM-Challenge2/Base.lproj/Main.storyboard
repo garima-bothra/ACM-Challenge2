@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HX2-lK-LEh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="srM-Ey-a2u">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -299,13 +299,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="f0c-Qq-m90">
-                                <rect key="frame" x="183" y="375.5" width="48" height="45"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locPin" translatesAutoresizingMaskIntoConstraints="NO" id="f0c-Qq-m90">
+                                <rect key="frame" x="183" y="355.5" width="48" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="dEA-GA-rkH"/>
+                                    <constraint firstAttribute="width" constant="48" id="fsY-yv-9du"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.7863368548530576" green="1" blue="0.85599405495476866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="f0c-Qq-m90" firstAttribute="centerY" secondItem="eIO-my-4xU" secondAttribute="centerY" constant="-50" id="9LE-IU-WF8"/>
+                            <constraint firstItem="f0c-Qq-m90" firstAttribute="centerY" secondItem="eIO-my-4xU" secondAttribute="centerY" constant="-70" id="9LE-IU-WF8"/>
                             <constraint firstItem="Dma-Vw-FdX" firstAttribute="top" secondItem="2YQ-NL-3JT" secondAttribute="bottom" constant="24" id="D5u-7v-6v5"/>
                             <constraint firstItem="Dma-Vw-FdX" firstAttribute="bottom" secondItem="GQY-Ew-HuW" secondAttribute="bottom" id="GKd-JU-Qsx"/>
                             <constraint firstItem="Dma-Vw-FdX" firstAttribute="leading" secondItem="GQY-Ew-HuW" secondAttribute="leading" constant="20" id="GzA-0k-S6O"/>
@@ -617,7 +621,7 @@
         <image name="Indicator" width="20" height="32"/>
         <image name="Profile Picture" width="130" height="130"/>
         <image name="Save" width="102" height="42"/>
-        <image name="pin" width="267" height="414"/>
+        <image name="locPin" width="267" height="414"/>
         <image name="plus.circle" catalog="system" width="64" height="60"/>
         <image name="plus.rectangle" catalog="system" width="64" height="46"/>
     </resources>

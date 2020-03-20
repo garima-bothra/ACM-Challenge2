@@ -86,6 +86,8 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell?.nameLabel.text = user[indexPath.row]["name"]
         cell?.cityLabel.text = (user[indexPath.row]["city"] ?? "") + "," + (user[indexPath.row]["state"] ?? "")
+        cell?.selectedBackgroundView = UIView()
+                
         let sex = user[indexPath.row]["gender"]
         
         switch sex {
@@ -96,7 +98,7 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         case "1":
             //cell?.profileImage.image = UIImage(named: "f")
-            cell?.profileImage.image = UIImage(named: "Profile Picture")
+            cell?.profileImage.image = UIImage(named: "f")
         default:
             cell?.profileImage.image = UIImage(named: "Profile Picture")
         }
@@ -106,6 +108,7 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
                 tableView.deselectRow(at: indexPath, animated: true)
         
+
         //perform segue
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         

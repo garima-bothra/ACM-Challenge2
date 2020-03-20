@@ -13,7 +13,7 @@ class dataTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
-    
+    @IBOutlet weak var view: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         

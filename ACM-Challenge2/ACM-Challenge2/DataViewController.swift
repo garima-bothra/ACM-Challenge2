@@ -51,12 +51,18 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
                             , let phone = document.data()["phone"] as? String
                                     
                                     , let latitude = document.data()["lat"] as? String
-                                        
-                                        , let gender = document.data()["gender"] as? Int
+                            
+                                        , let city = document.data()["city"] as? String
+                            
+                                            , let state = document.data()["state"] as? String
+                            
+                                                , let country = document.data()["country"] as? String
+
+                                                    , let gender = document.data()["gender"] as? Int
                                             
-                                             ,let longitude = document.data()["long"] as? String {
+                                                        ,let longitude = document.data()["long"] as? String {
                                                 
-                                                self.userinfo = ["name":name,"birthday":birthday,"phone":phone,"gender":String(gender),"lat":latitude,"long":longitude]
+                            self.userinfo = ["name":name,"birthday":birthday,"phone":phone,"gender":String(gender),"lat":latitude,"long":longitude,"city":city,"state":state,"country":country]
                                             
                                                 self.user.append(self.userinfo)
                                                 print(self.userinfo)
@@ -79,7 +85,7 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? dataTableViewCell
         
         cell?.nameLabel.text = user[indexPath.row]["name"]
-        
+        cell?.cityLabel.text = (user[indexPath.row]["city"] ?? "") + "," + (user[indexPath.row]["state"] ?? "")
         let sex = user[indexPath.row]["gender"]
         
         switch sex {

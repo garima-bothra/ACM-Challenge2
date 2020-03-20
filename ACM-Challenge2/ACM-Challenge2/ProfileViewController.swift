@@ -75,7 +75,7 @@ class ProfileViewController: UIViewController {
             let stateName = state
             let countryName = country
             let db = Firestore.firestore()
-            db.collection("users").addDocument(data: ["name":name!,"birthday":birthday!,"phone":phone!,"gender":gender,"lat":latitude,"long":longitude]) { (error) in
+            db.collection("users").addDocument(data: ["name":name!,"birthday":birthday!,"phone":phone!,"gender":gender,"lat":latitude,"long":longitude,"city":cityName,"state":stateName,"country":countryName]) { (error) in
                 
                 if error != nil {
                     print("Error saving user info")

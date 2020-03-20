@@ -9,7 +9,14 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var birthdayTextField: UITextField!
+    
+    @IBOutlet weak var phoneTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

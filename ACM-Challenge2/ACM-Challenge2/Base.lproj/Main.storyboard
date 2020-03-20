@@ -226,6 +226,12 @@
                         <viewLayoutGuide key="safeArea" id="jFr-ki-r8X"/>
                     </view>
                     <navigationItem key="navigationItem" id="BgA-WQ-3aQ"/>
+                    <connections>
+                        <outlet property="birthdayTextField" destination="Rbp-F4-TuB" id="btv-zf-Fte"/>
+                        <outlet property="genderSegmentedControl" destination="bNb-n9-2ma" id="v3T-TY-E00"/>
+                        <outlet property="nameTextField" destination="lqm-yR-HgC" id="aHT-0C-PB5"/>
+                        <outlet property="phoneTextField" destination="KBC-2U-hRu" id="G48-fT-4s2"/>
+                    </connections>
                 </viewController>
                 <stackView opaque="NO" contentMode="scaleToFill" id="2Ls-Wm-E5c">
                     <rect key="frame" x="0.0" y="0.0" width="378" height="34"/>

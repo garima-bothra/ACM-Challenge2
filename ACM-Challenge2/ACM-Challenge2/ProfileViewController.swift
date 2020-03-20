@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     
+    @IBOutlet weak var nameLabel: UILabel!
     //MARK: - Variables
     var name = String()
     var Gender = String()
@@ -34,6 +35,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         getDate()
         print(latlong)
+        locationLabel.text = ""
     }
     
 
@@ -42,9 +44,23 @@ class ProfileViewController: UIViewController {
         Utilities.styleTextField(nameTextField)
         Utilities.styleTextField(birthdayTextField)
         Utilities.styleTextField(phoneTextField)
-        locationLabel.text = locationName
+        if locationName != "" {
+            locationLabel.text = "🏠 " + locationName}
         addButton.isEnabled = true
+        //locationLabel.text =
     }
+    
+    @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            nameLabel.text = "Name 💁🏻‍♂️"
+        case 1:
+            nameLabel.text = "Name 💁🏼‍♀️"
+        default:
+            nameLabel.text = "Name 💁🏼‍♀️"
+        }
+    }
+    
     
     func validateFields() -> String? {
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || birthdayTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || phoneTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
@@ -108,7 +124,6 @@ class ProfileViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer :)))
         view.addGestureRecognizer(tapGesture)
         birthdayTextField.inputView = datePicker
-        locationLabel.text = locationName
     }
     
     @objc func viewTapped(gestureRecognizer : UITapGestureRecognizer){

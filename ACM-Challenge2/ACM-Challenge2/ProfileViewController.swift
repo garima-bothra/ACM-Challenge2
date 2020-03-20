@@ -9,18 +9,22 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    //MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
-    
     @IBOutlet weak var birthdayTextField: UITextField!
-    
     @IBOutlet weak var phoneTextField: UITextField!
+    
+    //MARK: - Variables
+    var name = String()
+    var Gender = String()
+    var Birthday = Date()
+    var phone = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 

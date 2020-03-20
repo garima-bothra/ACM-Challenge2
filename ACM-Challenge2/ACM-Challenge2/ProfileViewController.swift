@@ -68,8 +68,8 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    @IBAction func addButtonPushed(_ sender: Any) {
+    @IBAction func addButtonPushed(_ sender: UIButton) {
         addData()
     }
-    
+
 }

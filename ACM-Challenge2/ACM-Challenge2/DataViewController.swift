@@ -102,7 +102,33 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+                tableView.deselectRow(at: indexPath, animated: true)
+        
+        //perform segue
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(identifier: "ShowProfileDataViewController") as? ShowProfileDataViewController
+
+        let data = user[indexPath.row]
+        
+        vc?.name = data["name"] ?? ""
+        
+        vc?.birthday = data["birthday"] ?? ""
+
+        vc?.phone = data["phone"] ?? ""
+        
+        vc?.gender = data["gender"] ?? ""
+        
+        vc?.latitude = data["lat"] ?? ""
+        
+        vc?.longitude = data["long"] ?? ""
+
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 116
     }
+    
 }

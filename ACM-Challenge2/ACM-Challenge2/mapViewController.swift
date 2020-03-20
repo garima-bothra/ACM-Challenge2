@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 
 var latlong = [0.0,0.0]
+var locationName = ""
 
 class mapViewController: UIViewController{
     
@@ -29,6 +30,7 @@ class mapViewController: UIViewController{
         super.viewDidLoad()
         addressLabel.text = "move pin..."
         checkLocationServicesEnables()
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     
@@ -101,6 +103,12 @@ class mapViewController: UIViewController{
           let action = UIAlertAction(title: "ok", style: .default, handler: nil)
           alert.addAction(action)
       }
+    
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+
+    }
 }
 
 
@@ -131,6 +139,7 @@ extension mapViewController : MKMapViewDelegate {
             
             DispatchQueue.main.async {
                 self.addressLabel.text = "\(streetNumber) \(streetName)"
+                locationName = "\(streetNumber) \(streetName)"
                 //print(self.getCentreLocation(for: mapView).coordinate.latitude)
                 latlong[0] = self.getCentreLocation(for: mapView).coordinate.latitude
                 latlong[1] = self.getCentreLocation(for: mapView).coordinate.longitude

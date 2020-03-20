@@ -16,6 +16,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
     @IBOutlet weak var birthdayTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var addButton: UIButton!
     
     //MARK: - Variables
     var name = String()
@@ -23,16 +25,52 @@ class ProfileViewController: UIViewController {
     var Birthday = Date()
     var phone = String()
     
+    var td1 : Date = Date()
+    let dateFormatter = DateFormatter()
+    private var datePicker : UIDatePicker?
+    var x : String = "2019-12-10"
+
+
+
+    
     override func viewDidLoad() {
+        dateFormatter.dateFormat = "dd/MM/YYYY"
+
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(dateChanged(datepicker:)) , for: .valueChanged)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer :)))
+           view.addGestureRecognizer(tapGesture)
+        birthdayTextField.inputView = datePicker
+        
+        
+        
+        locationLabel.text = locationName
         super.viewDidLoad()
         print(latlong)
-        
+    }
+    
+    @objc func viewTapped(gestureRecognizer : UITapGestureRecognizer){
+        view.endEditing(true)
+    }
+    @objc func dateChanged(datepicker: UIDatePicker){
+        birthdayTextField.text = dateFormatter.string(from: datePicker!.date)
+        x = String(dateFormatter.string(from: datePicker!.date))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        locationLabel.text = locationName
+        addButton.isEnabled = true
     }
     
     func validateFields() -> String? {
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || birthdayTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || phoneTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
         {
             return "Please fill in all the fields"
+        }
+        if locationLabel.text == "" {
+            return "Please add location"
         }
         return nil
     }
@@ -46,7 +84,7 @@ class ProfileViewController: UIViewController {
             //self.showError(errorLabel, validateFields() ?? "error!")
         }
         else {
-            //addButton.isEnabled = false
+            addButton.isEnabled = false
             //Data variables
             let name =  nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
             let birthday = birthdayTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -71,5 +109,4 @@ class ProfileViewController: UIViewController {
     @IBAction func addButtonPushed(_ sender: UIButton) {
         addData()
     }
-
 }

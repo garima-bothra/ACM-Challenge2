@@ -100,11 +100,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="but-Wi-Vgd" customClass="ProfileViewController" customModule="ACM_Challenge2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xk8-ck-hnE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2XB-yZ-OD0">
-                                <rect key="frame" x="18" y="234" width="378" height="374"/>
+                                <rect key="frame" x="18" y="261" width="378" height="374"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-LY-YW1" userLabel="Name Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="378" height="34"/>
@@ -137,8 +137,8 @@
                                                     <constraint firstAttribute="width" constant="200" id="d73-OZ-wNy"/>
                                                 </constraints>
                                                 <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
+                                                    <segment title="Male"/>
+                                                    <segment title="Female"/>
                                                 </segments>
                                             </segmentedControl>
                                         </subviews>
@@ -223,9 +223,12 @@
                         <viewLayoutGuide key="safeArea" id="jFr-ki-r8X"/>
                     </view>
                     <navigationItem key="navigationItem" id="BgA-WQ-3aQ"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="addButton" destination="VEs-np-kPr" id="4Yw-mk-5df"/>
                         <outlet property="birthdayTextField" destination="Rbp-F4-TuB" id="btv-zf-Fte"/>
                         <outlet property="genderSegmentedControl" destination="bNb-n9-2ma" id="v3T-TY-E00"/>
+                        <outlet property="locationLabel" destination="MpE-Fj-g9A" id="ipF-w4-P5i"/>
                         <outlet property="nameTextField" destination="lqm-yR-HgC" id="aHT-0C-PB5"/>
                         <outlet property="phoneTextField" destination="KBC-2U-hRu" id="G48-fT-4s2"/>
                     </connections>
@@ -239,7 +242,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="srM-Ey-a2u" customClass="mapViewController" customModule="ACM_Challenge2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eIO-my-4xU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-NL-3JT">
@@ -256,11 +259,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkP-5V-YRn">
+                                <rect key="frame" x="320" y="708" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="srM-Ey-a2u" eventType="touchUpInside" id="Mff-UO-Mri"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="GQY-Ew-HuW"/>
                     </view>
                     <navigationItem key="navigationItem" id="QVl-ZD-qh2"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="addressLabel" destination="CMT-Xe-rik" id="IC6-fF-1at"/>
                         <outlet property="mapView" destination="2YQ-NL-3JT" id="EFi-VK-92B"/>

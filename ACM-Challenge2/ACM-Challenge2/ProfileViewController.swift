@@ -25,18 +25,9 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let name = "aaryan"
-//        let db = Firestore.firestore()
-//        db.collection("users").addDocument(data: ["name":name]) { (error) in
-//
-//            if error != nil {
-//                print("Error saving user info")
-//            }
-//            else {
-//            print("Done")
-//        }
-//    }
-}
+        print(latlong)
+        
+    }
     
     func validateFields() -> String? {
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || birthdayTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || phoneTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
@@ -61,8 +52,10 @@ class ProfileViewController: UIViewController {
             let birthday = birthdayTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
             let phone = phoneTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
             let gender = genderSegmentedControl.selectedSegmentIndex
+            let latitude = String(latlong[0])
+            let longitude = String(latlong[1])
             let db = Firestore.firestore()
-            db.collection("users").addDocument(data: ["name":name!,"birthday":birthday!,"phone":phone!,"gender":gender]) { (error) in
+            db.collection("users").addDocument(data: ["name":name!,"birthday":birthday!,"phone":phone!,"gender":gender,"lat":latitude,"long":longitude]) { (error) in
                 
                 if error != nil {
                     print("Error saving user info")

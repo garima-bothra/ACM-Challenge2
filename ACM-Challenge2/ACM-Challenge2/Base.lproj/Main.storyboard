@@ -270,9 +270,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-NL-3JT">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-NL-3JT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="srM-Ey-a2u" id="nuk-9q-1nh"/>
                                 </connections>
@@ -300,12 +299,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="f0c-Qq-m90">
+                                <rect key="frame" x="183" y="375.5" width="48" height="45"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.7863368548530576" green="1" blue="0.85599405495476866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="f0c-Qq-m90" firstAttribute="centerY" secondItem="eIO-my-4xU" secondAttribute="centerY" constant="-50" id="9LE-IU-WF8"/>
+                            <constraint firstItem="Dma-Vw-FdX" firstAttribute="top" secondItem="2YQ-NL-3JT" secondAttribute="bottom" constant="24" id="D5u-7v-6v5"/>
                             <constraint firstItem="Dma-Vw-FdX" firstAttribute="bottom" secondItem="GQY-Ew-HuW" secondAttribute="bottom" id="GKd-JU-Qsx"/>
                             <constraint firstItem="Dma-Vw-FdX" firstAttribute="leading" secondItem="GQY-Ew-HuW" secondAttribute="leading" constant="20" id="GzA-0k-S6O"/>
+                            <constraint firstItem="f0c-Qq-m90" firstAttribute="centerX" secondItem="2YQ-NL-3JT" secondAttribute="centerX" id="QYV-XP-hIw"/>
                             <constraint firstItem="GQY-Ew-HuW" firstAttribute="trailing" secondItem="Dma-Vw-FdX" secondAttribute="trailing" constant="20" id="Xsi-j7-5Cy"/>
+                            <constraint firstItem="2YQ-NL-3JT" firstAttribute="leading" secondItem="GQY-Ew-HuW" secondAttribute="leading" id="f9g-FA-qQ1"/>
+                            <constraint firstItem="2YQ-NL-3JT" firstAttribute="top" secondItem="eIO-my-4xU" secondAttribute="top" id="jc0-hL-rZf"/>
+                            <constraint firstItem="2YQ-NL-3JT" firstAttribute="trailing" secondItem="GQY-Ew-HuW" secondAttribute="trailing" id="sYh-fj-OO1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GQY-Ew-HuW"/>
                     </view>
@@ -609,6 +617,7 @@
         <image name="Indicator" width="20" height="32"/>
         <image name="Profile Picture" width="130" height="130"/>
         <image name="Save" width="102" height="42"/>
+        <image name="pin" width="267" height="414"/>
         <image name="plus.circle" catalog="system" width="64" height="60"/>
         <image name="plus.rectangle" catalog="system" width="64" height="46"/>
     </resources>

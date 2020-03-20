@@ -28,6 +28,9 @@ class ShowProfileDataViewController: UIViewController{
     var phone : String = ""
     var latitude : String = ""
     var longitude : String = ""
+    var city : String = ""
+    var state : String = ""
+    var country : String = ""
     var gender : String = ""
 
     override func viewDidLoad() {
@@ -37,9 +40,10 @@ class ShowProfileDataViewController: UIViewController{
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         nameLabel.text = name
+        phoneLabel.text = phone
         birthdayLabel.text = birthday
         genderLabel.text = gender
-        locationLabel.text = "\(latitude)   \(longitude)"
+        locationLabel.text = "\(latitude) \(longitude)"
         
         let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(Double(latitude)!, Double(longitude)!)

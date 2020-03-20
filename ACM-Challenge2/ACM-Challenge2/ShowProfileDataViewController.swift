@@ -32,6 +32,8 @@ class ShowProfileDataViewController: UIViewController{
     var state : String = ""
     var country : String = ""
     var gender : String = ""
+    
+    var genders = ["Male","Female","Unknown"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +44,11 @@ class ShowProfileDataViewController: UIViewController{
         nameLabel.text = name
         phoneLabel.text = phone
         birthdayLabel.text = birthday
-        genderLabel.text = gender
-        locationLabel.text = "\(latitude) \(longitude)"
-        
+        genderLabel.text = genders[Int(gender) ?? 2]
+        locationLabel.text = "\(city),  \(state)"
+    }
+    
+    func setupMap(){
         let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(Double(latitude)!, Double(longitude)!)
         let region : MKCoordinateRegion = MKCoordinateRegion(center: location,span: span)

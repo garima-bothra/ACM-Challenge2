@@ -37,6 +37,9 @@
                                 <state key="normal" title="Aaryan's Work">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="CSs-eL-VmV" kind="show" id="Kud-N6-aOK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941179999999" green="0.78039215689999997" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,6 +49,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="26L-qy-RWG">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="CSs-eL-VmV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8fu-6v-sdw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNz-TX-PS8">
+                                <rect key="frame" x="0.0" y="64" width="414" height="96"/>
+                                <items>
+                                    <navigationItem title="Welcome..." id="Bii-QX-1Lr"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmb-KK-vWm">
+                                <rect key="frame" x="143" y="383" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create New Profile"/>
+                                <connections>
+                                    <segue destination="but-Wi-Vgd" kind="show" id="A39-up-ZPV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-Ro-n1R">
+                                <rect key="frame" x="143" y="495" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create New Profile"/>
+                                <connections>
+                                    <segue destination="1GK-ih-osN" kind="show" id="Pe2-iT-zy7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TNz-TX-PS8" firstAttribute="leading" secondItem="kkX-9Q-uuA" secondAttribute="leading" id="3dC-ae-8xR"/>
+                            <constraint firstItem="TNz-TX-PS8" firstAttribute="top" secondItem="kkX-9Q-uuA" secondAttribute="top" constant="20" id="Mx2-x8-wUN"/>
+                            <constraint firstItem="TNz-TX-PS8" firstAttribute="trailing" secondItem="kkX-9Q-uuA" secondAttribute="trailing" id="nTe-sB-Kxh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kkX-9Q-uuA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Y4-qD-2Er" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="130"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tu1-FJ-PpD">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="but-Wi-Vgd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xk8-ck-hnE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="jFr-ki-r8X"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BgA-WQ-3aQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vt-3i-Mit" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720" y="-265"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8Gn-gC-Lu7">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="1GK-ih-osN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7av-7q-l4F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="x0A-Q0-LKc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ezB-Ld-gcP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUk-5u-cag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1719" y="444"/>
         </scene>
     </scenes>
 </document>

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B7BC374242491BF00668ACD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC373242491BF00668ACD /* ProfileViewController.swift */; };
 		8690A3C32423E482004913F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8690A3C22423E482004913F1 /* AppDelegate.swift */; };
 		8690A3C52423E482004913F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8690A3C42423E482004913F1 /* SceneDelegate.swift */; };
 		8690A3C72423E482004913F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8690A3C62423E482004913F1 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B7BC373242491BF00668ACD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8690A3BF2423E482004913F1 /* ACM-Challenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACM-Challenge2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8690A3C22423E482004913F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8690A3C42423E482004913F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				8690A3CB2423E487004913F1 /* Assets.xcassets */,
 				8690A3CD2423E487004913F1 /* LaunchScreen.storyboard */,
 				8690A3D02423E487004913F1 /* Info.plist */,
+				5B7BC373242491BF00668ACD /* ProfileViewController.swift */,
 			);
 			path = "ACM-Challenge2";
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 				B089476B60653F30A3D2424C /* Pods-ACM-Challenge2.debug.xcconfig */,
 				A2B4210C593D899315A449AE /* Pods-ACM-Challenge2.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +211,7 @@
 			files = (
 				8690A3C72423E482004913F1 /* ViewController.swift in Sources */,
 				8690A3C32423E482004913F1 /* AppDelegate.swift in Sources */,
+				5B7BC374242491BF00668ACD /* ProfileViewController.swift in Sources */,
 				8690A3C52423E482004913F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

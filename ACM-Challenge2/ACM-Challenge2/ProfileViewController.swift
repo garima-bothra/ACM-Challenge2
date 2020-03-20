@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ProfileViewController: UIViewController {
     
@@ -24,18 +25,58 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        let name = "aaryan"
+//        let db = Firestore.firestore()
+//        db.collection("users").addDocument(data: ["name":name]) { (error) in
+//
+//            if error != nil {
+//                print("Error saving user info")
+//            }
+//            else {
+//            print("Done")
+//        }
+//    }
+}
+    
+    func validateFields() -> String? {
+        if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || birthdayTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || phoneTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        {
+            return "Please fill in all the fields"
+        }
+        return nil
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - add data to firebase
+    func addData() {
+        //valudate fields
+        if validateFields() != nil {
+           // errorLabel.alpha = 1
+            //self.showError(errorLabel, validateFields() ?? "error!")
+        }
+        else {
+            //addButton.isEnabled = false
+            //Data variables
+            let name =  nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            let birthday = birthdayTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            let phone = phoneTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+            let gender = genderSegmentedControl.selectedSegmentIndex
+            let db = Firestore.firestore()
+            db.collection("users").addDocument(data: ["name":name!,"birthday":birthday!,"phone":phone!,"gender":gender]) { (error) in
+                
+                if error != nil {
+                    print("Error saving user info")
+                }
+                else {
+                   // self.successAlert()
+                print("Done")
+                }
+            }
+        }
     }
-    */
-
+    
+    @IBAction func addButtonPushed(_ sender: Any) {
+        addData()
+    }
+    
 }

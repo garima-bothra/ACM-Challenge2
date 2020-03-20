@@ -39,6 +39,9 @@ class ProfileViewController: UIViewController {
 
     
     override func viewDidAppear(_ animated: Bool) {
+        Utilities.styleTextField(nameTextField)
+        Utilities.styleTextField(birthdayTextField)
+        Utilities.styleTextField(phoneTextField)
         locationLabel.text = locationName
         addButton.isEnabled = true
     }

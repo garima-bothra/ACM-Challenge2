@@ -22,42 +22,21 @@ class ProfileViewController: UIViewController {
     //MARK: - Variables
     var name = String()
     var Gender = String()
-    var Birthday = Date()
+    var Birthday = String()
     var phone = String()
     
+    //MARK: - Date Variables
     var td1 : Date = Date()
     let dateFormatter = DateFormatter()
     private var datePicker : UIDatePicker?
-    var x : String = "2019-12-10"
 
-
-
-    
     override func viewDidLoad() {
-        dateFormatter.dateFormat = "dd/MM/YYYY"
-
-        datePicker = UIDatePicker()
-        datePicker?.datePickerMode = .date
-        datePicker?.addTarget(self, action: #selector(dateChanged(datepicker:)) , for: .valueChanged)
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer :)))
-           view.addGestureRecognizer(tapGesture)
-        birthdayTextField.inputView = datePicker
-        
-        
-        
-        locationLabel.text = locationName
         super.viewDidLoad()
+        getDate()
         print(latlong)
     }
     
-    @objc func viewTapped(gestureRecognizer : UITapGestureRecognizer){
-        view.endEditing(true)
-    }
-    @objc func dateChanged(datepicker: UIDatePicker){
-        birthdayTextField.text = dateFormatter.string(from: datePicker!.date)
-        x = String(dateFormatter.string(from: datePicker!.date))
-    }
+
     
     override func viewDidAppear(_ animated: Bool) {
         locationLabel.text = locationName
@@ -92,6 +71,9 @@ class ProfileViewController: UIViewController {
             let gender = genderSegmentedControl.selectedSegmentIndex
             let latitude = String(latlong[0])
             let longitude = String(latlong[1])
+            let cityName = city
+            let stateName = state
+            let countryName = country
             let db = Firestore.firestore()
             db.collection("users").addDocument(data: ["name":name!,"birthday":birthday!,"phone":phone!,"gender":gender,"lat":latitude,"long":longitude]) { (error) in
                 
@@ -108,5 +90,29 @@ class ProfileViewController: UIViewController {
     
     @IBAction func addButtonPushed(_ sender: UIButton) {
         addData()
+    }
+    
+    
+    
+    //MARK: - Date picker functions
+    func getDate(){
+        dateFormatter.dateFormat = "dd/MM/YYYY"
+
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(dateChanged(datepicker:)) , for: .valueChanged)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer :)))
+        view.addGestureRecognizer(tapGesture)
+        birthdayTextField.inputView = datePicker
+        locationLabel.text = locationName
+    }
+    
+    @objc func viewTapped(gestureRecognizer : UITapGestureRecognizer){
+        view.endEditing(true)
+    }
+    @objc func dateChanged(datepicker: UIDatePicker){
+        birthdayTextField.text = dateFormatter.string(from: datePicker!.date)
+        //x = String(dateFormatter.string(from: datePicker!.date))
     }
 }

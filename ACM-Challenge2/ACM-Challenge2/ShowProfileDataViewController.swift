@@ -33,6 +33,9 @@ class ShowProfileDataViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.isNavigationBarHidden = true
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        
         nameLabel.text = name
         birthdayLabel.text = birthday
         genderLabel.text = gender

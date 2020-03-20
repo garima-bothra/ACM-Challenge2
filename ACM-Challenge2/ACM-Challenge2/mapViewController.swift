@@ -12,6 +12,9 @@ import CoreLocation
 
 var latlong = [0.0,0.0]
 var locationName = ""
+var city = ""
+var state = ""
+var country = ""
 
 class mapViewController: UIViewController{
     
@@ -136,9 +139,11 @@ extension mapViewController : MKMapViewDelegate {
             guard let placemark = placemarks?.first else { return }
             let streetNumber = placemark.subThoroughfare ?? ""
             let streetName = placemark.thoroughfare ?? ""
-            
+            city = placemark.locality ?? ""
+            state = placemark.administrativeArea ?? ""
+            country = placemark.country ?? ""
             DispatchQueue.main.async {
-                self.addressLabel.text = "\(streetNumber) \(streetName)"
+                self.addressLabel.text = "\(streetNumber) \(streetName) \(city) \(state)"
                 locationName = "\(streetNumber) \(streetName)"
                 //print(self.getCentreLocation(for: mapView).coordinate.latitude)
                 latlong[0] = self.getCentreLocation(for: mapView).coordinate.latitude

@@ -44,28 +44,23 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
                 } else {
                     for document in querySnapshot!.documents {
                         
-                        if let name = document.data()["name"] as? String {
+                        if let name = document.data()["name"] as? String
                             
-                            if let birthday = document.data()["birthday"] as? String {
+                        , let birthday = document.data()["birthday"] as? String
                                 
-                                if let phone = document.data()["phone"] as? String {
+                            , let phone = document.data()["phone"] as? String
                                     
-                                    if let latitude = document.data()["lat"] as? String {
+                                    , let latitude = document.data()["lat"] as? String
                                         
-                                        if let gender = document.data()["gender"] as? Int {
+                                        , let gender = document.data()["gender"] as? Int
                                             
-                                            if let longitude = document.data()["long"] as? String {
-                                            
+                                             ,let longitude = document.data()["long"] as? String {
+                                                
                                                 self.userinfo = ["name":name,"birthday":birthday,"phone":phone,"gender":String(gender),"lat":latitude,"long":longitude]
                                             
                                                 self.user.append(self.userinfo)
                                                 print(self.userinfo)
                                                     }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
                             }
                         }
             self.tableView.reloadData()

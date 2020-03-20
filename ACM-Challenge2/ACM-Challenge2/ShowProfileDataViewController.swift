@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MapKit
 
-class ShowProfileDataViewController: UIViewController {
+class ShowProfileDataViewController: UIViewController{
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var birthdayLabel: UILabel!
@@ -18,6 +19,8 @@ class ShowProfileDataViewController: UIViewController {
     @IBOutlet weak var genderLabel: UILabel!
     
     @IBOutlet weak var locationLabel: UILabel!
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     //MARK: - Variables
     var name : String = ""
@@ -34,6 +37,18 @@ class ShowProfileDataViewController: UIViewController {
         birthdayLabel.text = birthday
         genderLabel.text = gender
         locationLabel.text = "\(latitude)   \(longitude)"
+        
+        let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(Double(latitude)!, Double(longitude)!)
+        let region : MKCoordinateRegion = MKCoordinateRegion(center: location,span: span)
+        mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        
+        annotation.coordinate = location
+        annotation.title = ""
+        annotation.subtitle = ""
+        mapView.addAnnotation(annotation)
         // Do any additional setup after loading the view.
     }
     

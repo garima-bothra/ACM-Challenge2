@@ -18,8 +18,9 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var user =  [[String:String]](){
            didSet {
+                print("user added")
                DispatchQueue.main.async {
-                   self.tableView.reloadData()
+                  // self.tableView.reloadData()
                }
            }
        }
@@ -27,7 +28,9 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
     var names : [String] = []
     
     override func viewDidLoad() {
-        getData()
+        locationName = ""
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        //getData()
         super.viewDidLoad()
     }
     
@@ -127,6 +130,12 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
         vc?.latitude = data["lat"] ?? ""
         
         vc?.longitude = data["long"] ?? ""
+        
+        vc?.city = data["city"] ?? ""
+        
+        vc?.state = data["state"] ?? ""
+
+        vc?.country = data["country"] ?? ""
 
         self.navigationController?.pushViewController(vc!, animated: true)
     }

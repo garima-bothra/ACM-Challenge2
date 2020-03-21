@@ -33,14 +33,22 @@ class ShowProfileDataViewController: UIViewController{
     var country : String = ""
     var gender : String = ""
     
+    
     var genders = ["Male","Female","Unknown"]
 
     override func viewDidLoad() {
+        
+        print(latitude,longitude,"latlong")
+        print(city,country,"city")
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = true
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         nameLabel.text = name
         phoneLabel.text = phone
         birthdayLabel.text = birthday

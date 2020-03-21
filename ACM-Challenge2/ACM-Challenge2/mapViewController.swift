@@ -109,8 +109,9 @@ class mapViewController: UIViewController{
     
     
     @IBAction func backPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-
+        //self.navigationController?.popViewController(animated: true)
+      //  self.presentedViewController!.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

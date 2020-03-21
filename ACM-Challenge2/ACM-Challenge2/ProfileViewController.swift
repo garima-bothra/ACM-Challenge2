@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController {
     var Gender = String()
     var Birthday = String()
     var phone = String()
-    
+        
     //MARK: - Date Variables
     var td1 : Date = Date()
     let dateFormatter = DateFormatter()
@@ -33,22 +33,20 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.locationLabel.text = "🏠 " + locationName
         getDate()
         print(latlong)
-        locationLabel.text = ""
     }
     
 
-    
     override func viewDidAppear(_ animated: Bool) {
         Utilities.styleTextField(nameTextField)
         Utilities.styleTextField(birthdayTextField)
         Utilities.styleTextField(phoneTextField)
-        if locationName != "" {
-            locationLabel.text = "🏠 " + locationName}
         addButton.isEnabled = true
-        //locationLabel.text =
+        print("profileVC appeared")
     }
+    
     
     @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
@@ -100,8 +98,9 @@ class ProfileViewController: UIViewController {
                     print("Error saving user info")
                 }
                 else {
-                   // self.successAlert()
+                // self.successAlert()
                 print("Done")
+                self.dismiss(animated: true, completion: nil)
                 }
             }
         }
@@ -110,8 +109,6 @@ class ProfileViewController: UIViewController {
     @IBAction func addButtonPushed(_ sender: UIButton) {
         addData()
     }
-    
-    
     
     //MARK: - Date picker functions
     func getDate(){

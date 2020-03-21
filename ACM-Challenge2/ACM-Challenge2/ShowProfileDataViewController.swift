@@ -44,8 +44,7 @@ class ShowProfileDataViewController: UIViewController{
         
         self.navigationController?.isNavigationBarHidden = true
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
-        
-
+        setupMap()
     }
     
     override func viewDidAppear(_ animated: Bool) {

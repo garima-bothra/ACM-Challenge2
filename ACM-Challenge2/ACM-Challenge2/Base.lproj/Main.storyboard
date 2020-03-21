@@ -59,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="2XB-yZ-OD0">
-                                <rect key="frame" x="18" y="183.5" width="378" height="375.5"/>
+                                <rect key="frame" x="18" y="168.5" width="378" height="375.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-LY-YW1" userLabel="Name Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="378" height="36"/>
@@ -152,7 +152,12 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="plus.circle" catalog="system"/>
                                                 <connections>
-                                                    <segue destination="srM-Ey-a2u" kind="show" id="HHj-KL-um4"/>
+                                                    <segue destination="srM-Ey-a2u" kind="popoverPresentation" popoverAnchorView="f0T-Zp-1bf" id="HHj-KL-um4">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                        <popoverPassthroughViews>
+                                                            <label reference="MpE-Fj-g9A"/>
+                                                        </popoverPassthroughViews>
+                                                    </segue>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -195,7 +200,7 @@
                             <constraint firstItem="cmU-TL-Jwc" firstAttribute="top" secondItem="jFr-ki-r8X" secondAttribute="top" id="HLl-Pw-l0M"/>
                             <constraint firstItem="2XB-yZ-OD0" firstAttribute="leading" secondItem="jFr-ki-r8X" secondAttribute="leading" constant="18" id="T6b-lJ-s7x"/>
                             <constraint firstItem="cmU-TL-Jwc" firstAttribute="trailing" secondItem="jFr-ki-r8X" secondAttribute="trailing" id="YvJ-HW-5DV"/>
-                            <constraint firstItem="2XB-yZ-OD0" firstAttribute="centerY" secondItem="xk8-ck-hnE" secondAttribute="centerY" constant="-50" id="hPr-MH-EEl"/>
+                            <constraint firstItem="2XB-yZ-OD0" firstAttribute="centerY" secondItem="xk8-ck-hnE" secondAttribute="centerY" constant="-65" id="hPr-MH-EEl"/>
                             <constraint firstItem="2XB-yZ-OD0" firstAttribute="centerX" secondItem="xk8-ck-hnE" secondAttribute="centerX" id="laV-LO-8rA"/>
                             <constraint firstItem="cmU-TL-Jwc" firstAttribute="leading" secondItem="jFr-ki-r8X" secondAttribute="leading" id="v5D-U1-LDy"/>
                         </constraints>
@@ -281,6 +286,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="CMT-Xe-rik" id="IC6-fF-1at"/>
                         <outlet property="mapView" destination="2YQ-NL-3JT" id="EFi-VK-92B"/>
+                        <segue destination="but-Wi-Vgd" kind="presentation" identifier="mySegue" id="CN1-6Q-JSp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ufb-bo-JNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -363,6 +369,7 @@
                                                 <constraint firstItem="vtb-l8-2Zh" firstAttribute="leading" secondItem="NCQ-4T-qr8" secondAttribute="leading" constant="18" id="g2c-ts-eM5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.75769312274955469" green="0.78205818965517238" blue="0.51399577995455326" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="cityLabel" destination="ZYU-UA-Ro4" id="eso-QF-iic"/>
                                             <outlet property="nameLabel" destination="Ol0-1p-30w" id="mmO-s5-g6H"/>
@@ -615,4 +622,7 @@
         <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
         <image name="plus.rectangle" catalog="system" width="64" height="46"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2ge-Lc-A2o"/>
+    </inferredMetricsTieBreakers>
 </document>

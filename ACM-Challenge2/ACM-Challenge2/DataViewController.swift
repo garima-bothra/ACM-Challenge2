@@ -20,7 +20,7 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
            didSet {
                 print("user added")
                DispatchQueue.main.async {
-                  // self.tableView.reloadData()
+                  self.tableView.reloadData()
                }
            }
        }
@@ -30,7 +30,7 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         locationName = ""
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        //getData()
+        getData()
         super.viewDidLoad()
     }
     

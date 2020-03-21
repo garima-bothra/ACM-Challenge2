@@ -30,22 +30,48 @@ class ProfileViewController: UIViewController {
     var td1 : Date = Date()
     let dateFormatter = DateFormatter()
     private var datePicker : UIDatePicker?
+    
+    var homeLocation = "" {
+        didSet {
+           locationLabel.text = homeLocation
+        print("home location changed")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.locationLabel.text = "🏠 " + locationName
+         NotificationCenter.default.addObserver(self,
+                                                  selector: #selector(refreshLbl),
+                                                  name: NSNotification.Name(rawValue: "refresh"),
+                                                  object: nil)
+       // self.locationLabel.text = "🏠 " + locationName
         getDate()
+        Utilities.styleTextField(nameTextField)
+        Utilities.styleTextField(birthdayTextField)
+        Utilities.styleTextField(phoneTextField)
         print(latlong)
+    }
+    
+    @objc func refreshLbl() {
+        locationLabel.text = "🏠 " + locationName
     }
     
 
     override func viewDidAppear(_ animated: Bool) {
-        Utilities.styleTextField(nameTextField)
-        Utilities.styleTextField(birthdayTextField)
-        Utilities.styleTextField(phoneTextField)
+        self.locationLabel.text = "🏠 " + locationName
         addButton.isEnabled = true
         print("profileVC appeared")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("view will appear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("view will disappear")
+    }
+    
+    
     
     
     @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
@@ -100,6 +126,7 @@ class ProfileViewController: UIViewController {
                 else {
                 // self.successAlert()
                 print("Done")
+                locationName = ""
                 self.dismiss(animated: true, completion: nil)
                 }
             }

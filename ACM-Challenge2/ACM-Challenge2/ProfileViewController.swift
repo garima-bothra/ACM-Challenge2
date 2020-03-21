@@ -19,7 +19,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     
+    @IBOutlet weak var plusbutton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    
     //MARK: - Variables
     var name = String()
     var Gender = String()
@@ -30,21 +33,10 @@ class ProfileViewController: UIViewController {
     var td1 : Date = Date()
     let dateFormatter = DateFormatter()
     private var datePicker : UIDatePicker?
-    
-    var homeLocation = "" {
-        didSet {
-           locationLabel.text = homeLocation
-        print("home location changed")
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         NotificationCenter.default.addObserver(self,
-                                                  selector: #selector(refreshLbl),
-                                                  name: NSNotification.Name(rawValue: "refresh"),
-                                                  object: nil)
-       // self.locationLabel.text = "🏠 " + locationName
+         NotificationCenter.default.addObserver(self,selector: #selector(refreshLbl),name:NSNotification.Name(rawValue: "refresh"),object: nil)
         getDate()
         Utilities.styleTextField(nameTextField)
         Utilities.styleTextField(birthdayTextField)
@@ -54,25 +46,14 @@ class ProfileViewController: UIViewController {
     
     @objc func refreshLbl() {
         locationLabel.text = "🏠 " + locationName
+        plusbutton.tintColor = .green
     }
     
 
     override func viewDidAppear(_ animated: Bool) {
-        self.locationLabel.text = "🏠 " + locationName
         addButton.isEnabled = true
         print("profileVC appeared")
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print("view will appear")
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        print("view will disappear")
-    }
-    
-    
-    
     
     @IBAction func segmentValueChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {

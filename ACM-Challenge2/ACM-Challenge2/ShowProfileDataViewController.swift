@@ -45,17 +45,16 @@ class ShowProfileDataViewController: UIViewController{
         self.navigationController?.isNavigationBarHidden = true
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
         setupMap()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         nameLabel.text = name
         phoneLabel.text = phone
         birthdayLabel.text = birthday
         genderLabel.text = genders[Int(gender) ?? 2]
         locationLabel.text = "\(city),  \(state)"
-    }
+        }
     
     func setupMap(){
+        let firstName = name.components(separatedBy: " ")[0]
+        
         let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let location : CLLocationCoordinate2D = CLLocationCoordinate2DMake(Double(latitude)!, Double(longitude)!)
         let region : MKCoordinateRegion = MKCoordinateRegion(center: location,span: span)
@@ -64,8 +63,8 @@ class ShowProfileDataViewController: UIViewController{
         let annotation = MKPointAnnotation()
         
         annotation.coordinate = location
-        annotation.title = ""
-        annotation.subtitle = ""
+        annotation.title = "\(firstName)'s home"
+        annotation.subtitle = "\(city),\(state)"
         mapView.addAnnotation(annotation)
     }
 }

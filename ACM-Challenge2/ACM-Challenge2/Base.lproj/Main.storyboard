@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,8 +59,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="2XB-yZ-OD0">
-                                <rect key="frame" x="18" y="166.5" width="378" height="379"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2XB-yZ-OD0">
+                                <rect key="frame" x="18" y="154" width="378" height="404"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-LY-YW1" userLabel="Name Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="378" height="36"/>
@@ -81,7 +82,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="h1t-hS-c1Z" userLabel="Birthday Stack">
-                                        <rect key="frame" x="0.0" y="71" width="378" height="36"/>
+                                        <rect key="frame" x="0.0" y="76" width="378" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday 🎂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46Z-kh-sCA">
                                                 <rect key="frame" x="0.0" y="0.0" width="153" height="36"/>
@@ -97,7 +98,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="GOV-NK-D9w" userLabel="Phone Stack">
-                                        <rect key="frame" x="0.0" y="142" width="378" height="36"/>
+                                        <rect key="frame" x="0.0" y="152" width="378" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone 📱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzP-4H-PpQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="125.5" height="36"/>
@@ -113,7 +114,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33U-vW-HDW" userLabel="Gender Stack">
-                                        <rect key="frame" x="0.0" y="213" width="378" height="36"/>
+                                        <rect key="frame" x="0.0" y="228" width="378" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender 🚻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKq-mV-D8W">
                                                 <rect key="frame" x="0.0" y="0.0" width="178" height="36"/>
@@ -137,7 +138,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58B-Sl-uW4" userLabel="Location Stack">
-                                        <rect key="frame" x="0.0" y="284" width="378" height="36"/>
+                                        <rect key="frame" x="0.0" y="304" width="378" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location📍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-9H-g0c">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
@@ -166,7 +167,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 🏠 10150 N Wolfe Rd  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpE-Fj-g9A">
-                                        <rect key="frame" x="0.0" y="355" width="378" height="24"/>
+                                        <rect key="frame" x="0.0" y="380" width="378" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -196,6 +197,13 @@
                                     <action selector="addButtonPushed:" destination="but-Wi-Vgd" eventType="touchUpInside" id="4Ro-5C-ODQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZX-s0-BLj">
+                                <rect key="frame" x="186" y="649" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.79852583777255037" green="0.89148492954446135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -347,7 +355,7 @@
                                                             <rect key="frame" x="346" y="34" width="20" height="32"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.74901960784313726" green="0.94509803921568625" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" name="Color"/>
                                                     <constraints>
                                                         <constraint firstItem="c8W-Fz-O5w" firstAttribute="centerY" secondItem="vtb-l8-2Zh" secondAttribute="centerY" id="3FM-dl-ikK"/>
                                                         <constraint firstItem="ZYU-UA-Ro4" firstAttribute="top" secondItem="vtb-l8-2Zh" secondAttribute="top" constant="55" id="8NW-8A-UuF"/>
@@ -448,7 +456,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OyA-33-ugr">
-                                <rect key="frame" x="20" y="462" width="374" height="200"/>
+                                <rect key="frame" x="20" y="468" width="374" height="244"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mze-3q-VD7">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -550,6 +558,26 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-8b-xph">
+                                        <rect key="frame" x="0.0" y="220" width="374" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqt-UO-4Ed">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="KGP-uJ-YJz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇮🇳 INDIA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sub-ZZ-NHH">
+                                                <rect key="frame" x="120" y="0.0" width="254" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.36738567102049269" green="0.54807090830732086" blue="0.5768609084880636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HkR-3Q-oGv">
@@ -575,7 +603,7 @@
                             <constraint firstItem="HkR-3Q-oGv" firstAttribute="leading" secondItem="SfY-zp-UDa" secondAttribute="leading" id="JU4-G2-YX6"/>
                             <constraint firstItem="OyA-33-ugr" firstAttribute="leading" secondItem="SfY-zp-UDa" secondAttribute="leading" constant="20" id="Nt1-Xh-yeq"/>
                             <constraint firstItem="vgj-EE-yJ5" firstAttribute="top" secondItem="HkR-3Q-oGv" secondAttribute="bottom" constant="-79" id="Uso-Aq-8x8"/>
-                            <constraint firstItem="SfY-zp-UDa" firstAttribute="bottom" secondItem="OyA-33-ugr" secondAttribute="bottom" constant="200" id="dWj-xd-2sf"/>
+                            <constraint firstItem="SfY-zp-UDa" firstAttribute="bottom" secondItem="OyA-33-ugr" secondAttribute="bottom" constant="150" id="dWj-xd-2sf"/>
                             <constraint firstItem="HkR-3Q-oGv" firstAttribute="top" secondItem="3oh-Ge-nVE" secondAttribute="top" id="fBu-jf-bwn"/>
                             <constraint firstItem="vgj-EE-yJ5" firstAttribute="centerX" secondItem="3oh-Ge-nVE" secondAttribute="centerX" id="xT4-7n-x92"/>
                             <constraint firstItem="vgj-EE-yJ5" firstAttribute="centerX" secondItem="3oh-Ge-nVE" secondAttribute="centerX" id="yqV-rh-pXI"/>
@@ -585,6 +613,7 @@
                     </view>
                     <connections>
                         <outlet property="birthdayLabel" destination="aep-Rv-c8e" id="yV1-Rs-N5X"/>
+                        <outlet property="countryLabel" destination="sub-ZZ-NHH" id="IYY-R7-6HU"/>
                         <outlet property="genderLabel" destination="jva-YD-yzl" id="gEu-o0-Fr8"/>
                         <outlet property="locationLabel" destination="mzU-el-HQ3" id="hLX-wD-ukl"/>
                         <outlet property="mapView" destination="HkR-3Q-oGv" id="fTE-MC-8WX"/>
@@ -624,6 +653,9 @@
         <image name="plus.circle" catalog="system" width="64" height="60"/>
         <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
         <image name="plus.rectangle" catalog="system" width="64" height="46"/>
+        <namedColor name="Color">
+            <color red="0.74901960784313726" green="0.94509803921568625" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2ge-Lc-A2o"/>

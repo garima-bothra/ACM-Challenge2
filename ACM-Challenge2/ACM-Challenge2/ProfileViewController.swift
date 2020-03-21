@@ -42,6 +42,8 @@ class ProfileViewController: UIViewController {
         Utilities.styleTextField(birthdayTextField)
         Utilities.styleTextField(phoneTextField)
         print(latlong)
+        locationLabel.text = ""
+        
     }
     
     @objc func refreshLbl() {

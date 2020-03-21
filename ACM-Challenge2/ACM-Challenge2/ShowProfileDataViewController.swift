@@ -20,6 +20,7 @@ class ShowProfileDataViewController: UIViewController{
     
     @IBOutlet weak var locationLabel: UILabel!
     
+    @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
     //MARK: - Variables
@@ -32,6 +33,7 @@ class ShowProfileDataViewController: UIViewController{
     var state : String = ""
     var country : String = ""
     var gender : String = ""
+    var 🌎 : String = ""
     
     var numberOfDays = 0
     
@@ -40,21 +42,11 @@ class ShowProfileDataViewController: UIViewController{
 
     override func viewDidLoad() {
         
-        
-        var countries: [String] = []
-
-        for code in NSLocale.isoCountryCodes  {
-            let id = NSLocale.localeIdentifier(fromComponents: [NSLocale.Key.countryCode.rawValue: code])
-            let name = NSLocale(localeIdentifier: "en_UK").displayName(forKey: NSLocale.Key.identifier, value: id) ?? "Country not found for code: \(code)"
-            countries.append(name)
-        }
-
-        print(countries)
-        
         print(latitude,longitude,"latlong")
         print(city,country,"city")
         super.viewDidLoad()
         
+        🌎 = Countries.setEmoji(country)
         self.navigationController?.isNavigationBarHidden = true
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
         setupMap()
@@ -63,6 +55,7 @@ class ShowProfileDataViewController: UIViewController{
         birthdayLabel.text = birthday
         genderLabel.text = genders[Int(gender) ?? 2]
         locationLabel.text = "\(city),  \(state)"
+        countryLabel.text = 🌎 + " " + country.capitalized
         
         }
     

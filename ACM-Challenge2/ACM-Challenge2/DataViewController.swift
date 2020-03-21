@@ -25,9 +25,9 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
            }
        }
     
-    var names : [String] = []
     
     override func viewDidLoad() {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: Notification.Name("NewFunctionName"), object: nil)
         locationName = ""
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         getData()
@@ -35,8 +35,12 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     //MARK: - Get Data From FireBase
-    func getData(){
+    @objc func getData(){
         
+         userinfo = [String: String]()
+
+         user =  [[String:String]]()
+
         let db = Firestore.firestore()
         
             db.collection("users").getDocuments() { (querySnapshot, err) in

@@ -45,6 +45,8 @@ class ProfileViewController: UIViewController {
         locationLabel.text = ""
         
     }
+        
+    
     
     @objc func refreshLbl() {
         locationLabel.text = "🏠 " + locationName
@@ -110,6 +112,7 @@ class ProfileViewController: UIViewController {
                 // self.successAlert()
                 print("Done")
                 locationName = ""
+                NotificationCenter.default.post(name: Notification.Name("NewFunctionName"), object: nil)
                 self.dismiss(animated: true, completion: nil)
                 }
             }

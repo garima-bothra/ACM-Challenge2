@@ -113,20 +113,8 @@ class mapViewController: UIViewController{
     
     
     @IBAction func backPressed(_ sender: Any) {
-        //self.navigationController?.popViewController(animated: true)
-      //  self.presentedViewController!.dismiss(animated: true, completion: nil)
-        //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil, userInfo: nil)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "mySegue" {
-            let vc = segue.destination as! ProfileViewController
-            print("yo")
-            vc.homeLocation = locationName
-            //vc.secondResultLabelText = "Testing"
-        }
     }
 }
 

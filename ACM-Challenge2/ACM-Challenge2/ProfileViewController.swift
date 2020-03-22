@@ -21,7 +21,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var plusbutton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var formView: UIView!
     
+    @IBOutlet weak var psLabel: UILabel!
     
     //MARK: - Variables
     var name = String()
@@ -35,6 +37,17 @@ class ProfileViewController: UIViewController {
     private var datePicker : UIDatePicker?
 
     override func viewDidLoad() {
+        
+        formView.layer.borderWidth = 2
+        formView.layer.borderColor = UIColor(displayP3Red: 140/255, green: 148/255, blue: 159/255, alpha: 1.0).cgColor
+        self.formView.layer.shadowPath =
+              UIBezierPath(roundedRect: self.formView.bounds,
+              cornerRadius: self.formView.layer.cornerRadius).cgPath
+        self.formView.layer.shadowColor = UIColor.black.cgColor
+        self.formView.layer.shadowOpacity = 0.5
+        self.formView.layer.shadowOffset = CGSize(width: 1, height: 2)
+        self.formView.layer.shadowRadius = 1
+        self.formView.layer.masksToBounds = false
         super.viewDidLoad()
          NotificationCenter.default.addObserver(self,selector: #selector(refreshLbl),name:NSNotification.Name(rawValue: "refresh"),object: nil)
         getDate()
@@ -44,6 +57,7 @@ class ProfileViewController: UIViewController {
         print(latlong)
         locationLabel.text = ""
         errorLabel.alpha = 0
+        psLabel.isHidden = true
     }
         
     
@@ -75,11 +89,14 @@ class ProfileViewController: UIViewController {
     func validateFields() -> String? {
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || birthdayTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || phoneTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
         {
+            psLabel.isHidden = true
             return "Please fill in all the fields"
         }
         if locationLabel.text == "" {
-            return "Please add location"
+            psLabel.isHidden = false
+            return "Please add your location"
         }
+        psLabel.isHidden = true
         return nil
     }
     

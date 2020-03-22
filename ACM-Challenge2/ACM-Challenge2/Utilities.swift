@@ -11,13 +11,9 @@ import UIKit
 
 class Utilities {
 static func styleTextField(_ textfield:UITextField) {
-
-// Create the bottom line
-let bottomLine = CALayer()
-bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 7, width: textfield.frame.width, height: 2)
-bottomLine.backgroundColor = UIColor.init(red: 215/255, green: 106/255, blue: 138/255, alpha: 1).cgColor
-textfield.borderStyle = .none
-textfield.layer.addSublayer(bottomLine)
+    textfield.layer.cornerRadius = 4.0
+    textfield.layer.masksToBounds = true
+    textfield.layer.borderColor = UIColor(displayP3Red: 151/255, green: 151/255, blue: 151/255, alpha: 1.0).cgColor
+    textfield.layer.borderWidth = 1.0
  }
-    
 }

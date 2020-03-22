@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var psLabel: UILabel!
     
+    @IBOutlet weak var load: UIActivityIndicatorView!
     //MARK: - Variables
     var name = String()
     var Gender = String()
@@ -58,6 +59,7 @@ class ProfileViewController: UIViewController {
         locationLabel.text = ""
         errorLabel.alpha = 0
         psLabel.isHidden = true
+        load.isHidden = true
     }
         
     
@@ -66,6 +68,7 @@ class ProfileViewController: UIViewController {
         locationLabel.text = "🏠 " + locationName
         plusbutton.tintColor = .green
         errorLabel.text = ""
+        psLabel.isHidden = true
     }
     
 
@@ -108,6 +111,8 @@ class ProfileViewController: UIViewController {
             self.showError(errorLabel, validateFields() ?? "error!")
         }
         else {
+            load.isHidden = false
+            load.startAnimating()
             addButton.isEnabled = false
             //Data variables
             let name =  nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)

@@ -256,6 +256,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="WHL-eK-L1L">
+                                <rect key="frame" x="185" y="594" width="44" height="37"/>
+                                <color key="color" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="profileVC"/>
                         <constraints>
@@ -267,10 +271,13 @@
                             <constraint firstItem="cmU-TL-Jwc" firstAttribute="top" secondItem="jFr-ki-r8X" secondAttribute="top" id="HLl-Pw-l0M"/>
                             <constraint firstItem="jFr-ki-r8X" firstAttribute="bottom" secondItem="VEs-np-kPr" secondAttribute="bottom" constant="54" id="I8P-WI-5rJ"/>
                             <constraint firstItem="ptU-FU-CWc" firstAttribute="top" secondItem="xk8-ck-hnE" secondAttribute="top" constant="140" id="R7e-EC-dHD"/>
+                            <constraint firstItem="VEs-np-kPr" firstAttribute="top" secondItem="WHL-eK-L1L" secondAttribute="bottom" constant="73" id="T8k-Z8-xTz"/>
                             <constraint firstItem="ptU-FU-CWc" firstAttribute="leading" secondItem="jFr-ki-r8X" secondAttribute="leading" constant="15" id="W6Q-ft-RGe"/>
                             <constraint firstItem="cmU-TL-Jwc" firstAttribute="trailing" secondItem="jFr-ki-r8X" secondAttribute="trailing" id="YvJ-HW-5DV"/>
+                            <constraint firstItem="WHL-eK-L1L" firstAttribute="leading" secondItem="jFr-ki-r8X" secondAttribute="leading" constant="185" id="d96-wB-Hdo"/>
                             <constraint firstItem="hZX-s0-BLj" firstAttribute="top" secondItem="MpE-Fj-g9A" secondAttribute="bottom" constant="24" id="lOS-2Y-Gme"/>
                             <constraint firstItem="MpE-Fj-g9A" firstAttribute="centerX" secondItem="xk8-ck-hnE" secondAttribute="centerX" id="nZ7-Ip-9rN"/>
+                            <constraint firstItem="jFr-ki-r8X" firstAttribute="trailing" secondItem="WHL-eK-L1L" secondAttribute="trailing" constant="185" id="nkk-vC-4BF"/>
                             <constraint firstItem="ysk-Zd-9pS" firstAttribute="top" secondItem="hZX-s0-BLj" secondAttribute="bottom" constant="7" id="pum-z4-fwF"/>
                             <constraint firstItem="jFr-ki-r8X" firstAttribute="trailing" secondItem="ptU-FU-CWc" secondAttribute="trailing" constant="15" id="t1E-Dv-p7Y"/>
                             <constraint firstItem="cmU-TL-Jwc" firstAttribute="leading" secondItem="jFr-ki-r8X" secondAttribute="leading" id="v5D-U1-LDy"/>
@@ -285,6 +292,7 @@
                         <outlet property="errorLabel" destination="hZX-s0-BLj" id="CTQ-gq-1ZO"/>
                         <outlet property="formView" destination="ptU-FU-CWc" id="CPM-vm-dUU"/>
                         <outlet property="genderSegmentedControl" destination="bNb-n9-2ma" id="v3T-TY-E00"/>
+                        <outlet property="load" destination="WHL-eK-L1L" id="Ko9-m2-9x9"/>
                         <outlet property="locationLabel" destination="MpE-Fj-g9A" id="ipF-w4-P5i"/>
                         <outlet property="nameLabel" destination="TQD-eE-jQV" id="22T-qh-8TH"/>
                         <outlet property="nameTextField" destination="lqm-yR-HgC" id="aHT-0C-PB5"/>
@@ -306,22 +314,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-NL-3JT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
                                 <connections>
                                     <outlet property="delegate" destination="srM-Ey-a2u" id="nuk-9q-1nh"/>
                                 </connections>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dma-Vw-FdX">
-                                <rect key="frame" x="20" y="724" width="374" height="84"/>
+                                <rect key="frame" x="20" y="766" width="374" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move pin..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMT-Xe-rik">
-                                        <rect key="frame" x="0.0" y="0.0" width="252" height="84"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="252" height="42"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkP-5V-YRn">
-                                        <rect key="frame" x="272" y="0.0" width="102" height="84"/>
+                                        <rect key="frame" x="272" y="0.0" width="102" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="6mp-ag-MFN"/>
                                         </constraints>
@@ -415,7 +423,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Indicator" translatesAutoresizingMaskIntoConstraints="NO" id="oKM-YG-om6">
-                                                            <rect key="frame" x="326" y="18" width="40" height="64"/>
+                                                            <rect key="frame" x="346" y="34" width="20" height="32"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" name="Color"/>
@@ -733,6 +741,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="HHj-KL-um4"/>
         <segue reference="CN1-6Q-JSp"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -94,8 +94,8 @@
                                     <action selector="addButtonPushed:" destination="but-Wi-Vgd" eventType="touchUpInside" id="4Ro-5C-ODQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZX-s0-BLj">
-                                <rect key="frame" x="18" y="573" width="378" height="33.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number should be only digits and should contain 10 digits" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="hZX-s0-BLj">
+                                <rect key="frame" x="18" y="573" width="378" height="100.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -146,7 +146,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rbp-F4-TuB">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rbp-F4-TuB">
                                                         <rect key="frame" x="148" y="0.0" width="200" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="adD-Uo-zfs"/>
@@ -165,7 +165,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KBC-2U-hRu">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KBC-2U-hRu">
                                                         <rect key="frame" x="148" y="0.0" width="200" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="nFA-uQ-6Ye"/>
@@ -257,7 +257,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PS: - Tap the ⊕ button 😉  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-Zd-9pS">
-                                <rect key="frame" x="113" y="613.5" width="188.5" height="18"/>
+                                <rect key="frame" x="113" y="680.5" width="188.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -320,22 +320,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-NL-3JT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
                                 <connections>
                                     <outlet property="delegate" destination="srM-Ey-a2u" id="nuk-9q-1nh"/>
                                 </connections>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dma-Vw-FdX">
-                                <rect key="frame" x="20" y="724" width="374" height="84"/>
+                                <rect key="frame" x="20" y="766" width="374" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move pin..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMT-Xe-rik">
-                                        <rect key="frame" x="0.0" y="0.0" width="252" height="84"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="252" height="42"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkP-5V-YRn">
-                                        <rect key="frame" x="272" y="0.0" width="102" height="84"/>
+                                        <rect key="frame" x="272" y="0.0" width="102" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="6mp-ag-MFN"/>
                                         </constraints>
@@ -429,7 +429,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Indicator" translatesAutoresizingMaskIntoConstraints="NO" id="oKM-YG-om6">
-                                                            <rect key="frame" x="326" y="18" width="40" height="64"/>
+                                                            <rect key="frame" x="346" y="34" width="20" height="32"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" name="Color"/>
@@ -665,7 +665,7 @@
                                     <outlet property="delegate" destination="zyu-nb-7dX" id="1Pc-SB-4Cm"/>
                                 </connections>
                             </mapView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="vgj-EE-yJ5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f" translatesAutoresizingMaskIntoConstraints="NO" id="vgj-EE-yJ5">
                                 <rect key="frame" x="107" y="221" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="KTd-Yn-Ybf"/>
@@ -695,6 +695,7 @@
                         <outlet property="mapView" destination="HkR-3Q-oGv" id="fTE-MC-8WX"/>
                         <outlet property="nameLabel" destination="kST-ES-jxR" id="BLx-Wh-r7d"/>
                         <outlet property="phoneLabel" destination="kEI-1t-BMP" id="liz-8K-tFx"/>
+                        <outlet property="profileImage" destination="vgj-EE-yJ5" id="Ggn-GB-Z7Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oxi-uS-g8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -724,13 +725,13 @@
     <resources>
         <image name="Indicator" width="20" height="32"/>
         <image name="Save" width="102" height="42"/>
+        <image name="f" width="637" height="637"/>
         <image name="locPin" width="267" height="414"/>
-        <image name="person" width="130" height="130"/>
         <image name="plus.circle" catalog="system" width="64" height="60"/>
         <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
         <image name="plus.rectangle" catalog="system" width="64" height="46"/>
         <namedColor name="Color">
-            <color red="0.74901960784313726" green="0.94509803921568625" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.74900001287460327" green="0.94499999284744263" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="city-state">
             <color red="0.36862745098039218" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

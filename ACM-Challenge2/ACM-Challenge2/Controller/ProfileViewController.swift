@@ -100,12 +100,37 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    func dateIsValid(_ date: String) -> Bool{
+        let dateRegEx = "[0-9]{2}/[0-9]{2}/[0-9]{4}"
+        let datePred = NSPredicate(format:"SELF MATCHES %@", dateRegEx)
+        return datePred.evaluate(with: date)
+        }
+    
+    func phoneIsValid(_ phone: String) -> Bool{
+        let phoneRegEX = "[0-9]{10}"
+        let phonePred = NSPredicate(format:"SELF MATCHES %@", phoneRegEX)
+        return phonePred.evaluate(with: phone)
+        }
+    
     
     func validateFields() -> String? {
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || birthdayTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || phoneTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
         {
             psLabel.isHidden = true
             return "Please fill in all the fields"
+        }
+        if dateIsValid((birthdayTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)) ?? ""){
+            print("Date valid")
+        }
+        else{
+            return "Date invalid, please check!"
+        }
+
+        if phoneIsValid((phoneTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)) ?? ""){
+            print("phone Number Valid")
+        }
+        else{
+            return "Phone number should contain only digits and should be 10 characters!"
         }
         if locationLabel.text == "" {
             psLabel.isHidden = false

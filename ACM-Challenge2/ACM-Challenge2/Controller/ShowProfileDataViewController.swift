@@ -19,6 +19,7 @@ class ShowProfileDataViewController: UIViewController{
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var profileImage: UIImageView!
     
     //MARK: - Variables
     var name : String = ""
@@ -55,6 +56,14 @@ class ShowProfileDataViewController: UIViewController{
         genderLabel.text = genders[Int(gender) ?? 2]
         locationLabel.text = "\(city),  \(state)"
         countryLabel.text = 🌎 + " " + country.capitalized
+        switch gender {
+        case "0":
+            profileImage.image = UIImage(named: "person")
+        case "1":
+            profileImage.image = UIImage(named: "f")
+        default:
+            profileImage.image = UIImage(named: "person")
+        }
     }
     
     

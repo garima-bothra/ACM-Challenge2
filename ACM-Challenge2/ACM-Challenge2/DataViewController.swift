@@ -16,6 +16,7 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var userinfo = [String: String]()
     var user =  [[String:String]]()
+    var locations = [[String:String]]()
     
     override func viewDidLoad() {
         NotificationCenter.default.addObserver(self, selector: #selector(getData), name: Notification.Name("NewFunctionName"), object: nil)
@@ -65,11 +66,15 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
                                             
                                                 self.user.append(self.userinfo)
                                                 print(self.userinfo)
-                                                    }
+                            self.locations.append(["name":name,"lat":latitude,"long":longitude])
+                            print(self.locations)
+
+                                                }
                             }
                         }
             self.tableView.reloadData()
                 }
+        print(locations)
         }
     
 

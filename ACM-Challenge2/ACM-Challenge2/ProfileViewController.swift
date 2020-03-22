@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
-    
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var plusbutton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -43,7 +43,7 @@ class ProfileViewController: UIViewController {
         Utilities.styleTextField(phoneTextField)
         print(latlong)
         locationLabel.text = ""
-        
+        errorLabel.alpha = 0
     }
         
     
@@ -51,6 +51,7 @@ class ProfileViewController: UIViewController {
     @objc func refreshLbl() {
         locationLabel.text = "🏠 " + locationName
         plusbutton.tintColor = .green
+        errorLabel.text = ""
     }
     
 
@@ -87,8 +88,7 @@ class ProfileViewController: UIViewController {
     func addData() {
         //valudate fields
         if validateFields() != nil {
-           // errorLabel.alpha = 1
-            //self.showError(errorLabel, validateFields() ?? "error!")
+            self.showError(errorLabel, validateFields() ?? "error!")
         }
         else {
             addButton.isEnabled = false
@@ -142,5 +142,10 @@ class ProfileViewController: UIViewController {
     @objc func dateChanged(datepicker: UIDatePicker){
         birthdayTextField.text = dateFormatter.string(from: datePicker!.date)
         //x = String(dateFormatter.string(from: datePicker!.date))
+    }
+    
+    func showError(_ label : UILabel, _ message : String){
+        label.alpha = 1
+        label.text = message
     }
 }

@@ -148,7 +148,7 @@ extension mapViewController : MKMapViewDelegate {
             country = placemark.country ?? ""
             DispatchQueue.main.async {
                 self.addressLabel.text = "\(streetNumber) \(streetName) \(city) \(state)"
-                locationName = "\(streetNumber) \(streetName)"
+                locationName = "\(streetNumber) \(streetName), \(city) \(state)"
                 //print(self.getCentreLocation(for: mapView).coordinate.latitude)
                 latlong[0] = self.getCentreLocation(for: mapView).coordinate.latitude
                 latlong[1] = self.getCentreLocation(for: mapView).coordinate.longitude

@@ -11,35 +11,27 @@ import FirebaseFirestore
 
 class DataViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //MARK:- Outlets and variables
     @IBOutlet weak var tableView: UITableView!
     
     var userinfo = [String: String]()
-    
-    
-    var user =  [[String:String]](){
-           didSet {
-                print("user added")
-               DispatchQueue.main.async {
-                  self.tableView.reloadData()
-               }
-           }
-       }
-    
+    var user =  [[String:String]]()
     
     override func viewDidLoad() {
         NotificationCenter.default.addObserver(self, selector: #selector(getData), name: Notification.Name("NewFunctionName"), object: nil)
-        locationName = ""
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         getData()
         super.viewDidLoad()
     }
     
-    //MARK: - Get Data From FireBase
+    //MARK: - Get Data From FireBase Firestore
     @objc func getData(){
         
-         userinfo = [String: String]()
+        userinfo = [String: String]()
 
-         user =  [[String:String]]()
+        user =  [[String:String]]()
+        
+        locationName = ""
 
         let db = Firestore.firestore()
         
@@ -80,35 +72,41 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
         }
     
+
     
+    //MARK: - TableView Delegate methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return user.count
     }
     
-    
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? dataTableViewCell
         
+        cell?.selectionStyle = .none
+        
+        let city = user[indexPath.row]["city"] ?? ""
+        
+        let state = user[indexPath.row]["state"] ?? ""
+        
         cell?.nameLabel.text = user[indexPath.row]["name"]
-        cell?.cityLabel.text = (user[indexPath.row]["city"] ?? "") + "," + (user[indexPath.row]["state"] ?? "")
-        cell?.selectedBackgroundView = UIView()
-                
+        
+        cell?.cityLabel.text =  city + "," + state
+                        
         let sex = user[indexPath.row]["gender"]
         
         switch sex {
             
         case "0":
-            //cell?.profileImage.image = UIImage(named: "m")
             cell?.profileImage.image = UIImage(named: "Profile Picture")
             
         case "1":
-            //cell?.profileImage.image = UIImage(named: "f")
             cell?.profileImage.image = UIImage(named: "f")
         default:
             cell?.profileImage.image = UIImage(named: "Profile Picture")
         }
+        
         return cell!
     }
     
@@ -147,5 +145,4 @@ class DataViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 116
     }
-    
 }

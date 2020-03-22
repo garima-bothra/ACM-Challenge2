@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>304491707221-kv8vd6rmhvql5cbq2927r61po2g6q4i3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.304491707221-kv8vd6rmhvql5cbq2927r61po2g6q4i3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDTJAt_ff0G5TwD0ab1BlYZQjavp0NGRYM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>304491707221</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.garimabothra.ACM-Challenge2</string>
+	<key>PROJECT_ID</key>
+	<string>acm-2-79915</string>
+	<key>STORAGE_BUCKET</key>
+	<string>acm-2-79915.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:304491707221:ios:a922a16f27706a39a18ddc</string>
+	<key>DATABASE_URL</key>
+	<string>https://acm-2-79915.firebaseio.com</string>
+</dict>
+</plist>

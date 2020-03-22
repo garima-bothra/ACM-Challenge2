@@ -22,23 +22,36 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var plusbutton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var formView: UIView!
-    
     @IBOutlet weak var psLabel: UILabel!
-    
     @IBOutlet weak var load: UIActivityIndicatorView!
+    
+    
     //MARK: - Variables
     var name = String()
     var Gender = String()
     var Birthday = String()
     var phone = String()
         
+    
     //MARK: - Date Variables
     var td1 : Date = Date()
     let dateFormatter = DateFormatter()
     private var datePicker : UIDatePicker?
 
+    
+    //MARK:- Initial Setup
     override func viewDidLoad() {
+
+        super.viewDidLoad()
         
+         NotificationCenter.default.addObserver(self,selector: #selector(refreshLbl),name:NSNotification.Name(rawValue: "refresh"),object: nil)
+        
+        formViewSetup()
+        getDate()
+        initialSetup()
+    }
+    
+    func formViewSetup(){
         formView.layer.borderWidth = 2
         formView.layer.borderColor = UIColor(displayP3Red: 140/255, green: 148/255, blue: 159/255, alpha: 1.0).cgColor
         self.formView.layer.shadowPath =
@@ -49,17 +62,16 @@ class ProfileViewController: UIViewController {
         self.formView.layer.shadowOffset = CGSize(width: 1, height: 2)
         self.formView.layer.shadowRadius = 1
         self.formView.layer.masksToBounds = false
-        super.viewDidLoad()
-         NotificationCenter.default.addObserver(self,selector: #selector(refreshLbl),name:NSNotification.Name(rawValue: "refresh"),object: nil)
-        getDate()
+    }
+    
+    func initialSetup(){
         Utilities.styleTextField(nameTextField)
-        Utilities.styleTextField(birthdayTextField)
-        Utilities.styleTextField(phoneTextField)
-        print(latlong)
-        locationLabel.text = ""
-        errorLabel.alpha = 0
-        psLabel.isHidden = true
-        load.isHidden = true
+          Utilities.styleTextField(birthdayTextField)
+          Utilities.styleTextField(phoneTextField)
+          locationLabel.text = ""
+          errorLabel.alpha = 0
+          psLabel.isHidden = true
+          load.isHidden = true
     }
         
     

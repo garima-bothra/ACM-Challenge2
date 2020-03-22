@@ -36,10 +36,6 @@ class mapViewController: UIViewController{
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("map appeared")
-    }
-    
     
     //MARK: - Location Methods
     
@@ -119,6 +115,8 @@ class mapViewController: UIViewController{
 }
 
 
+
+//MARK: - EXTENSIONS
 extension mapViewController : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {  checkLocationAuthorization()  }

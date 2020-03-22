@@ -34,10 +34,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQr-1x-QAF">
                                 <rect key="frame" x="53" y="475" width="304" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.78057038779999999" blue="0.63337567101226999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Aaryan's Work">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="PIL-hd-n7K" kind="show" id="fQ3-bl-Pfb"/>
                                 </connections>
@@ -314,22 +320,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-NL-3JT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
                                 <connections>
                                     <outlet property="delegate" destination="srM-Ey-a2u" id="nuk-9q-1nh"/>
                                 </connections>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dma-Vw-FdX">
-                                <rect key="frame" x="20" y="724" width="374" height="84"/>
+                                <rect key="frame" x="20" y="766" width="374" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move pin..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMT-Xe-rik">
-                                        <rect key="frame" x="0.0" y="0.0" width="252" height="84"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="252" height="42"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkP-5V-YRn">
-                                        <rect key="frame" x="272" y="0.0" width="102" height="84"/>
+                                        <rect key="frame" x="272" y="0.0" width="102" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="6mp-ag-MFN"/>
                                         </constraints>
@@ -423,7 +429,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Indicator" translatesAutoresizingMaskIntoConstraints="NO" id="oKM-YG-om6">
-                                                            <rect key="frame" x="326" y="18" width="40" height="64"/>
+                                                            <rect key="frame" x="346" y="34" width="20" height="32"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" name="Color"/>

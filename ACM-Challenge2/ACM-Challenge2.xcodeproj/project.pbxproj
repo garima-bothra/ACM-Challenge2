@@ -12,7 +12,6 @@
 		5B7BC3782424A57A00668ACD /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC3772424A57A00668ACD /* mapViewController.swift */; };
 		5B7BC37A2424F3C200668ACD /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC3792424F3C200668ACD /* DataViewController.swift */; };
 		5B7BC37C2424FCF200668ACD /* dataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC37B2424FCF200668ACD /* dataTableViewCell.swift */; };
-		5B7BC37E24250BBA00668ACD /* File in Resources */ = {isa = PBXBuildFile; fileRef = 5B7BC37D24250BBA00668ACD /* File */; };
 		5B7BC3802425104600668ACD /* ShowProfileDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC37F2425104600668ACD /* ShowProfileDataViewController.swift */; };
 		5B7BC38224253D8000668ACD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BC38124253D8000668ACD /* Utilities.swift */; };
 		5BA5F8422426611700B88547 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA5F8412426611700B88547 /* Countries.swift */; };
@@ -31,7 +30,6 @@
 		5B7BC3772424A57A00668ACD /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		5B7BC3792424F3C200668ACD /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		5B7BC37B2424FCF200668ACD /* dataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataTableViewCell.swift; sourceTree = "<group>"; };
-		5B7BC37D24250BBA00668ACD /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		5B7BC37F2425104600668ACD /* ShowProfileDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowProfileDataViewController.swift; sourceTree = "<group>"; };
 		5B7BC38124253D8000668ACD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5BA5F8412426611700B88547 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 		8690A3C12423E482004913F1 /* ACM-Challenge2 */ = {
 			isa = PBXGroup;
 			children = (
-				5B7BC37D24250BBA00668ACD /* File */,
 				8690A3C22423E482004913F1 /* AppDelegate.swift */,
 				8690A3C42423E482004913F1 /* SceneDelegate.swift */,
 				8690A3C62423E482004913F1 /* ViewController.swift */,
@@ -182,7 +179,6 @@
 				5B7BC3762424973300668ACD /* GoogleService-Info.plist in Resources */,
 				8690A3CC2423E487004913F1 /* Assets.xcassets in Resources */,
 				8690A3CA2423E482004913F1 /* Main.storyboard in Resources */,
-				5B7BC37E24250BBA00668ACD /* File in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

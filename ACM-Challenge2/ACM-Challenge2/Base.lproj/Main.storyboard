@@ -415,7 +415,7 @@
                             <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAT-E3-maq">
                                 <rect key="frame" x="0.0" y="10" width="414" height="96"/>
                                 <items>
-                                    <navigationItem title="Welcome" id="hgJ-Jr-wAF"/>
+                                    <navigationItem title=" Welcome" id="hgJ-Jr-wAF"/>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcj-RK-g3R">
@@ -607,7 +607,7 @@
                                     <outlet property="delegate" destination="zyu-nb-7dX" id="1Pc-SB-4Cm"/>
                                 </connections>
                             </mapView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile Picture" translatesAutoresizingMaskIntoConstraints="NO" id="vgj-EE-yJ5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="vgj-EE-yJ5">
                                 <rect key="frame" x="107" y="221" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="KTd-Yn-Ybf"/>
@@ -665,9 +665,9 @@
     </scenes>
     <resources>
         <image name="Indicator" width="20" height="32"/>
-        <image name="Profile Picture" width="130" height="130"/>
         <image name="Save" width="102" height="42"/>
         <image name="locPin" width="267" height="414"/>
+        <image name="person" width="130" height="130"/>
         <image name="plus.circle" catalog="system" width="64" height="60"/>
         <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
         <image name="plus.rectangle" catalog="system" width="64" height="46"/>

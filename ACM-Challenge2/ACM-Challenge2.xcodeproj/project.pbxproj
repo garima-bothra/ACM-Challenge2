@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70D0E68E242489F600CF336E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70D0E68D242489F600CF336E /* GoogleService-Info.plist */; };
+		70D0E690242927CB00CF336E /* formViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0E68F242927CB00CF336E /* formViewController.swift */; };
 		8690A3C32423E482004913F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8690A3C22423E482004913F1 /* AppDelegate.swift */; };
 		8690A3C52423E482004913F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8690A3C42423E482004913F1 /* SceneDelegate.swift */; };
 		8690A3C72423E482004913F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8690A3C62423E482004913F1 /* ViewController.swift */; };
 		8690A3CA2423E482004913F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8690A3C82423E482004913F1 /* Main.storyboard */; };
 		8690A3CC2423E487004913F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8690A3CB2423E487004913F1 /* Assets.xcassets */; };
 		8690A3CF2423E487004913F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8690A3CD2423E487004913F1 /* LaunchScreen.storyboard */; };
+		B085C34A283AAD6F25A94304 /* Pods_ACM_Challenge2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA0F78B4681C9C6E0FF5B7A /* Pods_ACM_Challenge2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AE62310018C75638383C05A /* Pods-ACM-Challenge2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACM-Challenge2.release.xcconfig"; path = "Target Support Files/Pods-ACM-Challenge2/Pods-ACM-Challenge2.release.xcconfig"; sourceTree = "<group>"; };
+		70D0E68D242489F600CF336E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70D0E68F242927CB00CF336E /* formViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formViewController.swift; sourceTree = "<group>"; };
 		8690A3BF2423E482004913F1 /* ACM-Challenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACM-Challenge2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8690A3C22423E482004913F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8690A3C42423E482004913F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		8690A3CB2423E487004913F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8690A3CE2423E487004913F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8690A3D02423E487004913F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BA0F78B4681C9C6E0FF5B7A /* Pods_ACM_Challenge2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACM_Challenge2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E036C977F085508ED0DCFAD8 /* Pods-ACM-Challenge2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACM-Challenge2.debug.xcconfig"; path = "Target Support Files/Pods-ACM-Challenge2/Pods-ACM-Challenge2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B085C34A283AAD6F25A94304 /* Pods_ACM_Challenge2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5861F5650AD8496B51102671 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E036C977F085508ED0DCFAD8 /* Pods-ACM-Challenge2.debug.xcconfig */,
+				2AE62310018C75638383C05A /* Pods-ACM-Challenge2.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8690A3B62423E482004913F1 = {
 			isa = PBXGroup;
 			children = (
 				8690A3C12423E482004913F1 /* ACM-Challenge2 */,
 				8690A3C02423E482004913F1 /* Products */,
+				5861F5650AD8496B51102671 /* Pods */,
+				8AEF3B354B88A08CB8A3CB43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +80,21 @@
 				8690A3C42423E482004913F1 /* SceneDelegate.swift */,
 				8690A3C62423E482004913F1 /* ViewController.swift */,
 				8690A3C82423E482004913F1 /* Main.storyboard */,
+				70D0E68F242927CB00CF336E /* formViewController.swift */,
 				8690A3CB2423E487004913F1 /* Assets.xcassets */,
 				8690A3CD2423E487004913F1 /* LaunchScreen.storyboard */,
 				8690A3D02423E487004913F1 /* Info.plist */,
+				70D0E68D242489F600CF336E /* GoogleService-Info.plist */,
 			);
 			path = "ACM-Challenge2";
+			sourceTree = "<group>";
+		};
+		8AEF3B354B88A08CB8A3CB43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BA0F78B4681C9C6E0FF5B7A /* Pods_ACM_Challenge2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +104,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8690A3D32423E487004913F1 /* Build configuration list for PBXNativeTarget "ACM-Challenge2" */;
 			buildPhases = (
+				8CEC21807E974DDDB5418275 /* [CP] Check Pods Manifest.lock */,
 				8690A3BB2423E482004913F1 /* Sources */,
 				8690A3BC2423E482004913F1 /* Frameworks */,
 				8690A3BD2423E482004913F1 /* Resources */,
@@ -126,12 +157,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				8690A3CF2423E487004913F1 /* LaunchScreen.storyboard in Resources */,
+				70D0E68E242489F600CF336E /* GoogleService-Info.plist in Resources */,
 				8690A3CC2423E487004913F1 /* Assets.xcassets in Resources */,
 				8690A3CA2423E482004913F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8CEC21807E974DDDB5418275 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ACM-Challenge2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8690A3BB2423E482004913F1 /* Sources */ = {
@@ -140,6 +197,7 @@
 			files = (
 				8690A3C72423E482004913F1 /* ViewController.swift in Sources */,
 				8690A3C32423E482004913F1 /* AppDelegate.swift in Sources */,
+				70D0E690242927CB00CF336E /* formViewController.swift in Sources */,
 				8690A3C52423E482004913F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +340,7 @@
 		};
 		8690A3D42423E487004913F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E036C977F085508ED0DCFAD8 /* Pods-ACM-Challenge2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +359,7 @@
 		};
 		8690A3D52423E487004913F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AE62310018C75638383C05A /* Pods-ACM-Challenge2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

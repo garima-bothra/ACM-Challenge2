@@ -9,8 +9,8 @@
 import Foundation
 
 struct form {
-    let name: String
-    let email: String
-    let number: Int
-    let address: String
+    let Name: String
+    let Email: String
+    let Phone: String
+    let DOB: String
 }
